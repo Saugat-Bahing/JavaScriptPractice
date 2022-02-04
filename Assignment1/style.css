@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: white;
+    background-color: black;
+}
+
+header{
+    border: 2px solid red;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header h1{
+    border: 2px solid blue;
+}
+
+.img {
+    display: inline;
+    background-repeat: no-repeat;
+    width: 40vw;
+    background-size: contain;
+    background-position: center;
+    background-size: contain;
+}
+
+.img_holder{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* height: 50vh; */
+    overflow: hidden;
+    padding: 0.5vw;
+}
+
+.holder{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    height: 30vh;
+    width: 19.5vw;
+    border: 1px solid rgb(247, 242, 243);
+    background-color: black;
+    box-sizing: border-box;
+}
+
+
+
+
