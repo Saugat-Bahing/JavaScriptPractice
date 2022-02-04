@@ -1,20 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Supermercado+One&display=swap');
+
+
 * {
     margin: 0;
     padding: 0;
     color: white;
     background-color: black;
+    font-family: 'Supermercado One', cursive;
 }
 
 header{
-    border: 2px solid red;
     height: 15vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: rgb(1, 1, 22);
+    font-size: 2em;
 }
 
 header h1{
-    border: 2px solid blue;
+    background-color: rgb(1, 1, 22);
 }
 
 .img {
@@ -39,11 +44,34 @@ header h1{
     display: flex;
     justify-content: center;
     /* align-items: center; */
-    height: 30vh;
-    width: 19.5vw;
+    height: 50vh;
+    width: 45vw;
     border: 1px solid rgb(247, 242, 243);
     background-color: black;
     box-sizing: border-box;
+}
+
+.search_bar{
+    /* border: 2px solid red; */
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.search_box{
+    height: 70%;
+    width: 35%;
+    border-radius: 10px;
+}
+
+.btn1 {
+    width: 10%;
+    height: 60%;
+    border-radius: 10px;
+    margin: 20px;
 }
 
 

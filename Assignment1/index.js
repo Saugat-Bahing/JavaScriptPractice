@@ -3,7 +3,7 @@ let btn1=document.getElementsByClassName("btn1")[0];
 let input=document.getElementsByClassName("search_box")[0]
 
 function getImg(){
-    const url="https:/api.unsplash.com/search/photos/?query="+input.value+"&per_page=15&client_id=TqGPBSCfI7Q23Jit8mrTdBsX0P_gRu5BhqzMRRT8Grg"
+    const url="https:/api.unsplash.com/search/photos/?query="+input.value+"&per_page=6&client_id=TqGPBSCfI7Q23Jit8mrTdBsX0P_gRu5BhqzMRRT8Grg"
 
     fetch(url)
     .then(response => {
