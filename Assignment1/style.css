@@ -65,6 +65,8 @@ header h1{
     height: 70%;
     width: 35%;
     border-radius: 10px;
+    font-size: 1.1em;
+    padding-left: 10px;
 }
 
 .btn1 {
@@ -72,6 +74,23 @@ header h1{
     height: 60%;
     border-radius: 10px;
     margin: 20px;
+    font-size: 1.05em;
+}
+
+.next {
+    width: 100px;
+    height: 40px;
+    background-color: rgb(1, 1, 24);
+    border-radius: 5px;
+    font-size: 1.1em;
+    
+}
+
+.new {
+    display: flex;
+    /* background-color: red; */
+    justify-content: right;
+    padding: 30px;
 }
 
 

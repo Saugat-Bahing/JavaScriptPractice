@@ -1,0 +1,94 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --boxsize: 8vw;
+}
+
+body {
+    perspective: 10em;
+    transform-style: preserve-3d;
+}
+
+.section {
+    width: 100vw;
+    height: 100vh;
+    /* background-color: rgb(178, 240, 10); */
+    /* opacity: 60%; */
+    transform-style: preserve-3d;
+}
+.scene {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    width: 60vw;
+    border: 2px solid red;
+    transform-style: preserve-3d;
+    /* perspective: 30em; */
+    /* animation: rotateScene 20s linear infinite; */
+}
+
+@keyframes rotateScene {
+    from {transform: rotateY(0deg);}
+    to {transform: rotateY(360deg);}
+}
+.cube {
+    /* position: absolute; */
+    /* width: 5vw; */
+    /* height: 5vw; */
+    /* background-color: rgb(158, 108, 108); */
+    /* opacity: 50%; */
+    /* border: 2px solid rgb(27, 24, 172); */
+    transform-style: preserve-3d;
+}
+
+.cube0 {
+    transform: translateX(-10vw);
+}
+
+.face {
+    position: absolute;
+    height: var(--boxsize);
+    width: var(--boxsize);
+    /* background-color: purple; */
+    border: 2px solid black;
+    box-sizing: border-box;
+    transform: rotateY(90deg);
+    transform-style: preserve-3d;
+}
+
+/* face0=front, face1=back, face2=top, face3=bottom, face4=left, face5=right*/
+
+.face0 {
+    transform: translateZ(calc(var(--boxsize)));
+    background-color: orange;
+}
+
+.face1 {
+    transform: translateZ(calc(var(--boxsize))) rotateX(180deg);
+    background-color: red;
+}
+
+.face2 {
+    transform: rotateX(80deg) translateY(calc(var(--boxsize)));
+    background-color: blue;
+}
+
+.face3 {
+    transform: rotateX(80deg) translateY(var(--boxsize));
+    background-color: grey;
+}
+
+.face4 {
+    transform: rotateY(80deg) translateX(calc(var(--boxsize)));
+    background-color: black;
+}
+
+.face5 {
+    background-color: green;
+    transform: rotateY(80deg) translateX(var(--boxsize));
+}
