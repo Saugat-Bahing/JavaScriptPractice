@@ -1,7 +1,8 @@
 const frame = document.getElementsByClassName("flags")[0];
-let display = document.getElementsByClassName("display")[0];
+const display = document.getElementsByClassName("display")[0];
 const search = document.getElementsByClassName("search")[0];
 const input = document.getElementsByClassName("search_box")[0];
+
 
 function get_flags() {
     fetch("./countries.json")
@@ -29,16 +30,6 @@ function get_flags() {
                 div.appendChild(name);
                 frame.appendChild(div);
             }
-
-            // for(let i; i<2; i++){
-            //     div = document.createElement("div");
-            //     div.className("imgHolder");
-            //     img = document.createElement("img");
-            //     img.src="https://flagcdn.com/256x192/"+keys[i]+".png";
-            //     div.appendChild(img);
-            //     frame.appendChild(div);
-            //     console.log("inside")
-            // }
         });
 }
 
@@ -101,6 +92,7 @@ function search_flag() {
                     code=getKeyByValue(data, x[0].toUpperCase()+x.substring(1)).toLocaleLowerCase();
                     console.log(code);
                     sImg.src="https://flagcdn.com/256x192/" +code+ ".png";
+                    sImg.alt="could not find flag image";
                     label=document.createElement("div");
                     label.className="label";
                     label.innerText=x[0].toUpperCase()+x.substring(1);
@@ -120,10 +112,11 @@ function search_flag() {
 
         })
 }
-get_flags()
+get_flags();
 search.addEventListener("click", search_flag);
 input.addEventListener("keydown",(key)=>{
     if(key.code=="Enter"){
         search_flag();
     }
 })
+

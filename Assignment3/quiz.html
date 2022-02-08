@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="quiz.css">
+    <title>Quiz</title>
+    <style>
+        .home_a{
+            right: 8vw;
+        }
+    </style>
+</head>
+<body>
+    <header> 
+        <nav>
+            <h1>Quiz</h1>
+            <a href="index.html" class="home_a"><h2>Home</h2></a>
+            <a href="flags.html" class="flag_a"><h2>All Flags</h2></a>
+        </nav>
+    </header>
+    <div class="main">
+        <div class="start_dis">
+            <div class="inner_start">
+                <input type="button" class="start_btn" value="START">
+            </div>
+        </div>
+        <div class="play">
+            <div class="score_board"></div>
+            <div class="question"><h1>Which country's flag is this?</h1></div>
+            <div class="flag_dis"></div>
+            <div class="sub_f">
+                <input type="text" class="text">
+                <input type="button" class="submit" value="Submit">
+            </div>
+            <div class="loser loser_vis">
+                <div class="loser_board">
+                    <div class="correct_ans"></div>
+                    <div class="your_score">you</div>
+                    <input type="button" class="play_again" value="Play Again">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="quiz.js"></script>
+</body>
+</html>

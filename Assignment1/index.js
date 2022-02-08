@@ -19,7 +19,7 @@ function getImg() {
                 alert(response.status)
         })
         .then(data => {
-            var data_copy=data;
+            var data_copy = data;
             console.log(data)
             const imgs = [];
             const holder = [];
@@ -49,12 +49,12 @@ function getImg() {
 }
 
 function next_btn() {
-    let data=getImg()
-    index+=6;
+    let data = getImg()
+    index += 6;
     if (index < 24) {
         const imgs = [];
         const holder = [];
-        for (let i = index; i < index+6; i++) {
+        for (let i = index; i < index + 6; i++) {
             holder[i] = document.createElement("div")
             holder[i].className = "holder";
             imgs[i] = document.createElement("div");
@@ -68,16 +68,32 @@ function next_btn() {
             holder[i].appendChild(imgs[i]);
             frame.appendChild(holder[i]);
         }
-    }}
+    }
+}
 
-    btn1.addEventListener("click", getImg)
-    btn1.addEventListener('click', () => { console.log("clicked") })
-    input.addEventListener('keydown', function (key) {
-        if (key.code === "Enter") {
-            getImg();
+btn1.addEventListener("click", getImg)
+btn1.addEventListener('click', () => {
+    console.log("clicked");
+    if(input.value){
+        next.classList.remove("nex");   
+    }
+    else{
+        alert("Enter text in the search box!")
+    }
+    
+})
+input.addEventListener('keydown', function (key) {
+    if (key.code === "Enter") {
+        if(input.value){
+            next.classList.remove("nex");   
         }
-    })
-    next.addEventListener("click", next_btn)
+        else{
+            alert("Enter text in the search box!")
+        }
+        getImg(); 
+    }
+})
+next.addEventListener("click", next_btn)
 
 
 

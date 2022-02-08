@@ -64,6 +64,7 @@ header h1{
 .search_box{
     height: 70%;
     width: 35%;
+    min-height: 20px;
     border-radius: 10px;
     font-size: 1.1em;
     padding-left: 10px;
@@ -72,6 +73,7 @@ header h1{
 .btn1 {
     width: 10%;
     height: 60%;
+    min-height: 30px;
     border-radius: 10px;
     margin: 20px;
     font-size: 1.05em;
@@ -83,7 +85,7 @@ header h1{
     background-color: rgb(1, 1, 24);
     border-radius: 5px;
     font-size: 1.1em;
-    
+    /* display: none; */
 }
 
 .new {
@@ -91,6 +93,10 @@ header h1{
     /* background-color: red; */
     justify-content: right;
     padding: 30px;
+}
+
+.nex {
+    display: none;
 }
 
 
