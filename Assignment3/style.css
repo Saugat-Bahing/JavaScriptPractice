@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    background-color: #004445;
+    /* color: aliceblue; */
+    color: black;
+    font-family: 'Oswald', sans-serif;
+}
+
+:root {
+    --key_size: 10vh;
+} 
+
+header {
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #021C1E;
+}
+
+header h1{
+    background-color: #021C1E;
+    font-size: 3em;
+    color: rgb(246, 250, 253);
+}
+.container{
+    position: relative;
+    top: 5vh;
+    /* border: 2px solid green; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.screen{
+    width: calc(var(--key_size)*4);
+    height: 20vh;
+    border: 3px solid #021C1E;
+    border-bottom: none;
+    background-color: #6FB98F;
+    box-shadow: 4px 4px #021C1E;
+}
+
+.upper{
+    display: flex;
+    /* flex-direction: column; */
+    height: 10vh;
+    justify-content: right;
+    align-items: center;
+    background-color: #6FB98F;
+}
+
+.lower {
+    display: flex;
+    height: 10vh;
+    border-top: 1px solid grey;
+    justify-content: right;
+    align-items: center;
+    background-color: #6FB98F;
+}
+
+.lower {
+    padding-right: 5px;
+    font-size: 4vh; 
+    background-color: #6FB98F   
+}
+
+.upper {
+    padding-right: 5px;
+    font-size: 4vh;   
+    background-color: #6FB98F 
+}
+
+.keyboard {
+    border: 2px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(var(--key_size)*4);
+    height: calc(var(--key_size)*5);
+    box-shadow: 4px 4px #021C1E;
+}
+
+.keys {
+    box-sizing: border-box;
+    width: var(--key_size);
+    height: var(--key_size);
+    background-color: #2C7873;
+    border: 1px solid #021C1E;
+    font-weight: 40px;
+    font-size: 1.5em;
+}
+
+.dot{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+}
+
+
+._0 {
+    width: calc(var(--key_size)*2);
+}
+
+.keys:hover{
+    background-color: rgb(230, 230, 248);
+    /* transform: translateX(1px) translateY(1px); */
+}
+
+.keys_clicked{
+    animation: animate 0.01s linear 1;
+}
+
+@keyframes animate{
+    from {transform: translateX(2px) translateY(2px);}
+    to {transform: translateX(2px) translateY(2px);
+    }
+}
+
+@media only screen and (min-width: 200px) {
+    header{
+        font-size: 0.8em;
+        height: 15vh;
+    }
+    .keys:hover{
+        background-color: #2C7873;
+    }
+    
+}
