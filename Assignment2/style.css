@@ -1,94 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Supermercado+One&display=swap');
 
 * {
-    margin: 0;
     padding: 0;
+    margin: 0;
+    font-family: 'Supermercado One', cursive;
 }
 
-:root {
-    --boxsize: 8vw;
+header h1{
+    position: relative;
+    color: aqua;
+    font-size: 2em;
+    left: 20px;
 }
 
-body {
-    perspective: 10em;
-    transform-style: preserve-3d;
+.flag_a {
+    position: absolute;
+    border: 1px solid rgb(6, 4, 19);
+    border-radius: 4px;
+    padding: 5px;
+    text-decoration: none;
+    right: 20vw;
+    top: 2vh;
+    background-color: rgb(10, 40, 44);
+    box-shadow: -1px 1px rgb(13, 10, 49);
 }
 
-.section {
-    width: 100vw;
-    height: 100vh;
-    /* background-color: rgb(178, 240, 10); */
-    /* opacity: 60%; */
-    transform-style: preserve-3d;
+.home_a {
+    position: absolute;
+    border: 1px solid rgb(6, 4, 19);
+    border-radius: 4px;
+    padding: 5px;
+    text-decoration: none;
+    right: 20vw;
+    top: 2vh;
+    box-shadow: -1px 1px rgb(13, 10, 49);
 }
-.scene {
+
+.quiz_a {
+    position: absolute;
+    /* border: 2px solid red; */
+    border: 1px solid rgb(6, 4, 19);
+    border-radius: 4px;
+    padding: 5px;
+    text-decoration: none;
+    right: 10vw;
+    top: 2vh;
+    box-shadow: -1px 1px rgb(13, 10, 49);
+}
+
+nav a h2{
+    color: rgb(119, 177, 243);
+    left: 200px;
+    font-size: 1.4em;
+}
+
+
+
+header {
     display: flex;
+    height: 10vh;
+    min-height: 60px;
+    /* border: 2px solid red; */
+    align-items: center;
+    background-color: rgb(10, 39, 43);
+    /* border: 2px solid red; */
+}
+
+nav {
+    display: flex;
+    /* border: 2px solid green; */
+    width: 100vw;
+}
+
+.search_bar{
+    display: flex;
+    height: 6vh;
     justify-content: center;
     align-items: center;
-    height: 80vh;
-    width: 60vw;
-    border: 2px solid red;
-    transform-style: preserve-3d;
-    /* perspective: 30em; */
-    /* animation: rotateScene 20s linear infinite; */
+    background-color: rgb(13, 48, 53);
+    padding: 20px;
 }
 
-@keyframes rotateScene {
-    from {transform: rotateY(0deg);}
-    to {transform: rotateY(360deg);}
-}
-.cube {
-    /* position: absolute; */
-    /* width: 5vw; */
-    /* height: 5vw; */
-    /* background-color: rgb(158, 108, 108); */
-    /* opacity: 50%; */
-    /* border: 2px solid rgb(27, 24, 172); */
-    transform-style: preserve-3d;
+.search_box{
+    height: 70%;
+    width: 35%;
+    border-radius: 10px;
+    font-size: 1.1em;
+    padding-left: 10px;
+    min-height: 18px;
 }
 
-.cube0 {
-    transform: translateX(-10vw);
+.search {
+    width: 10%;
+    height: 70%;
+    border-radius: 10px;
+    margin: 20px;
+    font-size: 1.05em;
+    min-height: 25px;
 }
 
-.face {
-    position: absolute;
-    height: var(--boxsize);
-    width: var(--boxsize);
-    /* background-color: purple; */
-    border: 2px solid black;
-    box-sizing: border-box;
-    transform: rotateY(90deg);
-    transform-style: preserve-3d;
+.display{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(217, 208, 231); 
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid rgb(181, 182, 209);
 }
 
-/* face0=front, face1=back, face2=top, face3=bottom, face4=left, face5=right*/
-
-.face0 {
-    transform: translateZ(calc(var(--boxsize)));
-    background-color: orange;
+.hImg {
+    width: 20vw;
 }
 
-.face1 {
-    transform: translateZ(calc(var(--boxsize))) rotateX(180deg);
-    background-color: red;
+.label {
+    /* border: 2px solid red; */
+    font-size: 2em;
+    color: rgb(11, 22, 32);
+    padding: 10px;
 }
 
-.face2 {
-    transform: rotateX(80deg) translateY(calc(var(--boxsize)));
-    background-color: blue;
+.flags{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* background-color: rgb(13, 48, 53); */
+    background-color: rgb(217, 208, 231);
 }
 
-.face3 {
-    transform: rotateX(80deg) translateY(var(--boxsize));
-    background-color: grey;
+.imgHolder{
+    padding: 20px;
+    border: 1px solid rgb(104, 103, 128);
+    width: 20vw;
+    background-color: #fff;
 }
 
-.face4 {
-    transform: rotateY(80deg) translateX(calc(var(--boxsize)));
-    background-color: black;
-}
-
-.face5 {
-    background-color: green;
-    transform: rotateY(80deg) translateX(var(--boxsize));
+.img{
+    width: 20vw;
 }

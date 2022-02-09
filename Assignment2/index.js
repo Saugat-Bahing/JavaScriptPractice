@@ -1,36 +1,36 @@
-const scene=document.getElementsByClassName("scene")[0]
+const section = document.getElementsByClassName("section")[0];
+const imgH = document.getElementsByClassName("imgHolder1")[0];
 
-function create_child(parent, i){
-    let clas="cube"+String(i);
-    let createdElement=document.createElement("div");
-    createdElement.className=clas;
-    createdElement.classList.add("cube");
-    parent.appendChild(createdElement);
+function get_flags_home() { 
+    fetch("./countries.json")
+        .then(response => {
+            return response.json();
+        })
+        .then(data => {
+            console.log(data);
+            const keys = Object.keys(data);
+            const keys_lower = keys.map((x) => x.toLocaleLowerCase());
+            console.log(keys_lower[2]);
+            let div;
+            let img;
+            let name;
+            for (let i = 0; i < keys.length; i++) {
+                name = document.createElement("div");
+                name.className = "name";
+                name.innerText = data[keys[i]];
+                div = document.createElement("div");
+                div.className = "imgHolder1";
+                img = document.createElement("img");
+                img.className = "imgg"
+                img.src = "https://flagcdn.com/256x192/" + keys_lower[i] + ".png";
+                div.appendChild(img);
+                div.appendChild(name);
+                section.appendChild(div);
+            }
+        });
 }
 
-function create_div(parent){
-    for(let i=0; i<27; i++){
-        create_child(parent, i);
-    }
+function animate(){
 }
 
-function create_face(parent, i){
-    let faceClass="face"+String(i);
-    let createdFace=document.createElement("div");
-    createdFace.className=faceClass;
-    createdFace.classList.add("face")
-    parent.appendChild(createdFace);
-}
-
-function add_face(){
-    let cubeSeg;
-    for(let i=0; i<27; i++){
-        cubeSeg=document.getElementsByClassName("cube"+String(i))[0];
-        for(let j=0; j<6; j++){
-            create_face(cubeSeg, j);
-        }
-    }
-}
-
-create_div(scene);
-add_face();
+get_flags_home();
