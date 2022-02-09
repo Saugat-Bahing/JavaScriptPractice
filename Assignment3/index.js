@@ -1,7 +1,7 @@
 const section = document.getElementsByClassName("section")[0];
 const imgH = document.getElementsByClassName("imgHolder1")[0];
 
-function get_flags_home() {
+function get_flags_home() { 
     fetch("./countries.json")
         .then(response => {
             return response.json();

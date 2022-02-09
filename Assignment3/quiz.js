@@ -33,17 +33,18 @@ function get_random_flag() {
 }
 
 function display_flag() {
-    score_board.innerText="SCORE: "+score;
+    score_board.innerText="SCORE: "+score;//string interpolation
     flag = get_random_flag();
-    fetch("./countries.json")
+    fetch("./countries.json") //ajax call
         .then(response => {
             return response.json();
         })
         .then(data => {
-            console.log(data);
+            // console.log(data);
+            // debugger
             const keys = Object.keys(data);
             const keys_lower = keys.map((x) => x.toLocaleLowerCase());
-            console.log(keys_lower.length);
+            // console.log(keys_lower.length);
             let div;
             let img;
             div = document.createElement("div");
@@ -108,6 +109,7 @@ play_again.addEventListener("click", function(){
     loser.classList.add("loser_vis");
     score=0;
 })
+
 
 
 
