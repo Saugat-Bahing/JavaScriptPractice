@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@300;400&family=Roboto+Slab:wght@100&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Oswald', sans-serif;
+}
+
+.section{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    width: 100vw;
+    height: 100vh;
+    /* border: 1px solid red; */
+    /* overflow-wrap: normal; */
+    /* flex-direction: column; */
+}
+
+.coverImg {
+    border: 2px solid rgb(22, 100, 22);
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-image: url("images/background.jfif");
+}
+
+.coverImg h2 {
+    color: rgba(255, 255, 255, 0.1);
+    font-size: 2.5em;
+    -webkit-text-stroke-width: 0.1px;
+    -webkit-text-stroke-color: rgb(237, 237, 243);
+    padding-right: 5px;
+}
+
+.image-label {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+a {
+    color: black;
+    position: relative;
+    left: 30%;
+    top: 3%;
+    font-size: 1.3em;
+    text-decoration: none;
+}
+
+a:hover{
+    color: rgb(86, 6, 139);
+}
+
+.container{
+    /* width: 70vw; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 5px solid purple; */
+    overflow: scroll;
+    padding-top: 100px;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid blue; */
+    width: 80%;
+    /*height: 80%; */
+    margin-bottom: 100px;
+}
+
+.label {
+    /* margin-top: 100px; */
+    padding: 10px;
+}
+
+.name {
+    display: flex;
+}
+
+.firstName, .lastName{
+    width: 50%;
+}
+
+
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    /* border: 1px solid grey; */
+}
+
+input {
+    height: 30px;
+    font-family: 'Lato', sans-serif;
+    padding-left: 5px;
+    font-size: 1.05em;
+}
+
+#submit {
+    width: 100%;
+    margin-top: 10px;
+    background-color: black;
+    color: white;
+    height: 40px;
+    font-size: 1.2em;
+}
+
+
+@media only screen and (max-width: 800px) {
+    .section{
+        grid-template-columns: 100vw;
+        grid-template-rows: 35% auto;
+    }
+
+    .container{
+        overflow: visible;
+        padding-top: 2%;
+    }
+
+    .coverImg{
+        background: white url("images/landscape1.jfif") no-repeat;
+        background-size: cover;
+        overflow: hidden;
+    }
+
+    .coverImg img{
+        z-index: -1;
+    }
+
+    .center{
+        width: 90vw;
+    }
+}

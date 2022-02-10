@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Employees Gallery</title>
+</head>
+
+<body>
+    <div class="section">
+        <div class="coverImg">
+            <div class="image-label">
+                <h2>Employees</h2>
+                <h2>Gallery</h2>
+            </div>
+        </div>
+        <div class="container">
+            <a href="login.html">Login</a>
+            <div class="label">
+                <h1>Sign Up</h1>
+            </div>
+            <div class="center">
+                <form action="/login.html" class="signup" onsubmit="return validateSignUp()">
+                    <!-- <div class="container"> -->
+                    <div class="name">
+                        <div class="firstName flex-column">
+                            <label for="first-name">First Name</label>
+                            <input type="text" id="first-name" name="first-name">
+                        </div>
+                        <div class="lastName flex-column">
+                            <label for="last-name">Last Name</label>
+                            <input type="text" id="last-name" name="last-name">
+                        </div>
+                    </div>
+                    <div class="email flex-column">
+                        <label for="email">Email address</label>
+                        <input type="email" id="email-id" name="email">
+                    </div>
+                    <div class="userName flex-column">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username">
+                    </div>
+                    <div class="password flex-column">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password">
+                    </div>
+                    <div class="confirm-password flex-column">
+                        <label for="confirm-password">Confirm Password</label>
+                        <input type="password" id="confirm-password" name="confirm-password">
+                    </div>
+                    <input type="submit" value="Sign Up" id="submit">
+                    <!-- </div> -->
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
