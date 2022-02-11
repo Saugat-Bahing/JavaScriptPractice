@@ -4,16 +4,14 @@ const search = document.getElementsByClassName("search")[0];
 const input = document.getElementsByClassName("search_box")[0];
 
 
-function get_flags() {
+function getFlags() {
     fetch("./countries.json")
         .then(response => {
             return response.json();
         })
         .then(data => {
-            console.log(data);
             const keys = Object.keys(data);
             const keys_lower = keys.map((x) => x.toLocaleLowerCase());
-            console.log(keys_lower[2]);
             let div;
             let img;
             let name;
@@ -33,11 +31,13 @@ function get_flags() {
         });
 }
 
+
 function getKeyByValue(object, value) {
     return Object.keys(object).find(key => object[key] === value);
   }
 
-function conv_to_searchable(word){
+
+function convToSearchable(word){
     let converted;
     converted=word[0].toUpperCase()+word.substring(1);
     for(let i=0; i<word.length; i++){
@@ -53,16 +53,14 @@ function conv_to_searchable(word){
     return converted;
 }
 
-console.log(conv_to_searchable("united states"))
 
-function search_flag() {
+function searchFlag() {
     fetch("./countries.json")
         .then(response => {
             return response.json();
         })
         .then(data => {
-            const countries = Object.values(data);/*.map(x => x.toLocaleLowerCase());*/
-            // console.log(countries)
+            const countries = Object.values(data);
             let sImg;
             let code;
             let label;
@@ -71,7 +69,6 @@ function search_flag() {
                 r.parentNode.removeChild(r);
                 for (i of display.childNodes) {
                     display.removeChild(i);
-                    console.log(i);
                 }
             })
             input.addEventListener("keydown",(key)=>{
@@ -80,17 +77,15 @@ function search_flag() {
                     r.parentNode.removeChild(r);
                     for (i of display.childNodes) {
                         display.removeChild(i);
-                        console.log(i);
                     }
                 }
             })
             let check=0;
             for (x of countries) {
-                if (x == conv_to_searchable(input.value)) {
+                if (x == convToSearchable(input.value)) {
                     sImg=document.createElement("img");
                     sImg.className="hImg";
                     code=getKeyByValue(data, x[0].toUpperCase()+x.substring(1)).toLocaleLowerCase();
-                    console.log(code);
                     sImg.src="https://flagcdn.com/256x192/" +code+ ".png";
                     sImg.alt="could not find flag image";
                     label=document.createElement("div");
@@ -112,11 +107,13 @@ function search_flag() {
 
         })
 }
-get_flags();
-search.addEventListener("click", search_flag);
+
+
+getFlags();
+search.addEventListener("click", searchFlag);
 input.addEventListener("keydown",(key)=>{
     if(key.code=="Enter"){
-        search_flag();
+        searchFlag();
     }
 })
 

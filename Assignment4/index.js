@@ -11,7 +11,8 @@ let outside;
 let leftCount;
 let rightCount;
 
-function create_details() {
+
+function createDetails() {
     let empId = document.createElement("div");
     let fullName = document.createElement("div");
     let post = document.createElement("div");
@@ -23,20 +24,18 @@ function create_details() {
     details.appendChild(post);
 }
 
-function get_data() {
+function getData() {
     fetch("./employee.json")
         .then(response => {
             return response.json();
         })
         .then((data) => {
-            console.log(data);
             empId = data['Employees'][ind].employeeCode;
             fullName = data['Employees'][ind].FullName;
             post = data['Employees'][ind].jobTitleName;
             details.childNodes[0].innerText = "Employee ID: " + empId;
             details.childNodes[1].innerText = "Full Name: " + fullName;
             details.childNodes[2].innerText = "Designation: " + post;
-            console.log(empId, fullName, post);
             imgs=document.createElement("img");
             imgs.src=data.Employees[ind].url;
             imgs.className="img";
@@ -56,32 +55,32 @@ function get_data() {
         })
 }
 
-let previous_ele;
-function left_click(){
+let previousElement;
+function leftClick(){
     leftCount=1;
-    get_data();
-    previous_ele=document.getElementsByClassName("out"+String(ind))[0];
+    getData();
+    previousElement=document.getElementsByClassName("out"+String(ind))[0];
     ind+=1;
-    imgHolder.removeChild(previous_ele);
+    imgHolder.removeChild(previousElement);
     if(ind==5){
         ind=0;
 }}
 
-function right_click(){
+function rightClick(){
     rightCount=1;
-    get_data();
-    previous_ele=document.getElementsByClassName("out"+String(ind))[0];
+    getData();
+    previousElement=document.getElementsByClassName("out"+String(ind))[0];
     ind-=1;
-    imgHolder.removeChild(previous_ele);
+    imgHolder.removeChild(previousElement);
     if(ind<0){
         ind=4;
 }}
 
 
-create_details()
-get_data();
+createDetails()
+getData();
 
-left.addEventListener("click", left_click);
-right.addEventListener("click", right_click);
+left.addEventListener("click", leftClick);
+right.addEventListener("click", rightClick);
 
     

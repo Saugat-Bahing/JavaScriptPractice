@@ -21,7 +21,6 @@
 .play{
     position: relative;
     display: none;
-    /* border: 2px solid red; */
     height: 80vh;
     top: 5vh;
 }
@@ -60,7 +59,6 @@
 }
 
 .question {
-    /* border: 2px solid green; */
     padding: 20px;
 }
 
@@ -70,12 +68,10 @@
 }
 
 .flag_dis{
-    /* border: 2px solid blue; */
     padding: 10px;
 }
 
 .sub_f{
-    /* border: 2px solid red; */
     margin: 20px;
 }
 
@@ -104,7 +100,6 @@
     right: 1.5vw;
     height: 30px;
     width: 200px;
-    /* border: 2px solid green; */
     font-family: 'Oswald', sans-serif;
     font-size: 1.5em;
 }
@@ -118,7 +113,6 @@
     align-items: center;
     background-color: rgba(239, 249, 252, 0.3);
     top: 10vh;
-    /* border: 2px solid red; */
 }
 
 .loser_board{
@@ -145,7 +139,6 @@
 }
 
 .correct_ans{
-    /* position: relative; */
     bottom: 14vw;
     color: rgb(248, 14, 33);
     font-size: 1.3em;

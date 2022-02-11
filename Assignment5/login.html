@@ -11,23 +11,25 @@
 
 <body>
     <div class="login">
-    <a href="index.html">Sign Up</a>
-    <div class="container">
-        <div class="label"><h1>Login</h1></div>
-        <div class="center">
-            <form action="/gallery.html" class="signup" onsubmit="return verifyUser()">
-                <div class="email flex-column">
-                    <label for="email">Email address</label>
-                    <input type="email" id="email-id" name="email">
-                </div>
-                <div class="password flex-column">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" name="password">
-                </div>
-                <input type="submit" value="Login" id="submit">
-            </form>
+        <a href="index.html">Sign Up</a>
+        <div class="container">
+            <div class="label">
+                <h1>Login</h1>
+            </div>
+            <div class="center">
+                <form action="/gallery.html" class="signup" onsubmit="return verifyUser()">
+                    <div class="email flex-column">
+                        <label for="email">Email address</label>
+                        <input type="email" id="email-id" name="email">
+                    </div>
+                    <div class="password flex-column">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password">
+                    </div>
+                    <input type="submit" value="Login" id="submit">
+                </form>
+            </div>
         </div>
-    </div>
     </div>
     <script src="login.js"></script>
 </body>

@@ -14,14 +14,14 @@ const correct_ans=document.getElementsByClassName("correct_ans")[0];
 const your_score=document.getElementsByClassName("your_score")[0];
 const play_again=document.getElementsByClassName("play_again")[0];
 
-function get_random_flag() {
+
+function getRandomFlag() {
     let random = Math.random() * 1000;
     while (true) {
         if (searched.includes(random) == false) {
             if (random < 252) {
                 searched.push(parseInt(random));
-                console.log(searched)
-                break
+                break;
             }
             else {
                 random = Math.random() * 1000;
@@ -32,19 +32,16 @@ function get_random_flag() {
     return parseInt(random)
 }
 
-function display_flag() {
-    score_board.innerText="SCORE: "+score;//string interpolation
-    flag = get_random_flag();
-    fetch("./countries.json") //ajax call
+function displayFlag() {
+    score_board.innerText="SCORE: "+score;
+    flag = getRandomFlag();
+    fetch("./countries.json") 
         .then(response => {
             return response.json();
         })
         .then(data => {
-            // console.log(data);
-            // debugger
             const keys = Object.keys(data);
             const keys_lower = keys.map((x) => x.toLocaleLowerCase());
-            // console.log(keys_lower.length);
             let div;
             let img;
             div = document.createElement("div");
@@ -55,11 +52,9 @@ function display_flag() {
             div.appendChild(img);
             flag_dis.appendChild(div);
         });
-    // return flag
 }
 
 function check() {
-    console.log(searched.at(-1), "i");
     fetch("./countries.json")
         .then(response => {
             return response.json();
@@ -73,14 +68,12 @@ function check() {
             else if (input.value.toLocaleLowerCase() == values_lower[searched.at(-1)]) {
                 flag_dis.removeChild(flag_dis.childNodes[0]);
                 score += 1; 
-                display_flag();
-                console.log("correct"); 
+                displayFlag();
                 input.value="";
             }
             else {
-                // console.log("Correct ans: " + values[searched.at(-1)])
                 input.value="";
-                your_score.innerText="Your Score: "+score;
+                your_score.innerText="Your Score: "+score; 
                 loser.classList.remove("loser_vis");
                 correct_ans.innerText="Correct answer: "+values[searched.at(-1)];
             }
@@ -88,8 +81,7 @@ function check() {
 
 }
 
-display_flag()
-// check()
+displayFlag()
 
 submit.addEventListener("click", check);
 input.addEventListener("keydown", function (key){

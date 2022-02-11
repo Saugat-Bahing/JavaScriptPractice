@@ -12,13 +12,9 @@
     grid-template-columns: 30% 70%;
     width: 100vw;
     height: 100vh;
-    /* border: 1px solid red; */
-    /* overflow-wrap: normal; */
-    /* flex-direction: column; */
 }
 
 .coverImg {
-    border: 2px solid rgb(22, 100, 22);
     display: flex; 
     flex-wrap: wrap;
     justify-content: center;
@@ -54,12 +50,10 @@ a:hover{
 }
 
 .container{
-    /* width: 70vw; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* border: 5px solid purple; */
     overflow: scroll;
     padding-top: 100px;
 }
@@ -67,14 +61,11 @@ a:hover{
 .center {
     display: flex;
     flex-direction: column;
-    /* border: 1px solid blue; */
     width: 80%;
-    /*height: 80%; */
     margin-bottom: 100px;
 }
 
 .label {
-    /* margin-top: 100px; */
     padding: 10px;
 }
 
@@ -92,7 +83,6 @@ a:hover{
     display: flex;
     flex-direction: column;
     padding: 20px;
-    /* border: 1px solid grey; */
 }
 
 input {

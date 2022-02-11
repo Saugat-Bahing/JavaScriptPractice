@@ -15,12 +15,12 @@ function verifyUser() {
         return false;
     }
 
-    if(localStorage.getItem("signUpDetails")==null){
+    if (localStorage.getItem("signUpDetails") == null) {
         alert("You have to Sign Up first!");
         return false;
     }
 
-    else if (notUser(email.value, password.value)){
+    else if (notUser(email.value, password.value)) {
         alert("Invalid Username or Password!");
         return false;
     }
@@ -30,10 +30,10 @@ function verifyUser() {
 
 function notUser(testEmail, testPassword) {
     existingUser = JSON.parse(localStorage.getItem("signUpDetails"));
-    for(let i=0; i<existingUser.length; i++){
+    for (let i = 0; i < existingUser.length; i++) {
         console.log(existingUser[i].email);
-        if (existingUser[i].email==testEmail && existingUser[i].password==testPassword){
-               return false;
+        if (existingUser[i].email == testEmail && existingUser[i].password == testPassword) {
+            return false;
         }
     }
     return true;

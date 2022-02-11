@@ -1,16 +1,15 @@
 const section = document.getElementsByClassName("section")[0];
 const imgH = document.getElementsByClassName("imgHolder1")[0];
 
-function get_flags_home() { 
+
+function getFlagsHome() { 
     fetch("./countries.json")
         .then(response => {
             return response.json();
         })
         .then(data => {
-            console.log(data);
             const keys = Object.keys(data);
             const keys_lower = keys.map((x) => x.toLocaleLowerCase());
-            console.log(keys_lower[2]);
             let div;
             let img;
             let name;
@@ -30,7 +29,5 @@ function get_flags_home() {
         });
 }
 
-function animate(){
-}
 
-get_flags_home();
+getFlagsHome();

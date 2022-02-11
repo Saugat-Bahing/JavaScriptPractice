@@ -26,17 +26,13 @@ a:hover{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* border: 5px solid purple; */
-    /* overflow: scroll; */
     padding-top: 100px;
 }
 
 .center {
     display: flex;
     flex-direction: column;
-    /* border: 1px solid blue; */
     width: 80%;
-    /*height: 80%; */
     margin-bottom: 100px;
 }
 
@@ -56,13 +52,10 @@ a:hover{
     width: 50%;
 }
 
-
-
 .flex-column {
     display: flex;
     flex-direction: column;
     padding: 20px;
-    /* border: 1px solid grey; */
 }
 
 input {
@@ -83,7 +76,6 @@ input {
 
 .login{
     display: flex;
-    /* border: 2px solid red; */
     height: 100vh;
     justify-content: center;
 }
