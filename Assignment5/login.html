@@ -20,11 +20,13 @@
                 <form action="/gallery.html" class="signup" onsubmit="return verifyUser()">
                     <div class="email flex-column">
                         <label for="email">Email address</label>
-                        <input type="email" id="email-id" name="email">
+                        <input type="email" id="email-id" name="email" onchange="removeClassEmail()">
+                        <div class="enter-email-prompt" id="email-prompt">*Please provide your Email Id!</div>
                     </div>
                     <div class="password flex-column">
                         <label for="password">Password</label>
-                        <input type="password" id="password" name="password">
+                        <input type="password" id="password" name="password" onchange="removeClassPassword()">
+                        <div class = "enter-password-prompt" id= "password-prompt">*Please provide your Password!</div>
                     </div>
                     <input type="submit" value="Login" id="submit">
                 </form>

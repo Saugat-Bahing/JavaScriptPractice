@@ -80,6 +80,21 @@ input {
     justify-content: center;
 }
 
+.enter-email-prompt {
+    display: none;
+    padding-top: 10px;
+    color: red;
+}
+
+.enter-password-prompt {
+    display: none;
+    padding-top: 10px;
+    color: red;
+}
+
+.make-div-visible {
+    display: block;
+}
 
 @media only screen and (max-width: 850px) {
   .container {

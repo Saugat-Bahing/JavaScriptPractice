@@ -13,6 +13,7 @@ let leftCount;
 let rightCount;
 
 function createDetails() {
+
     let empId = document.createElement("div");
     let fullName = document.createElement("div");
     let post = document.createElement("div");
@@ -25,6 +26,7 @@ function createDetails() {
 }
 
 function getData() {
+
     fetch("./employee.json")
         .then(response => {
             return response.json();
@@ -59,6 +61,7 @@ function getData() {
 
 let previousElement;
 function leftClick() {
+
     leftCount = 1;
     getData();
     previousElement = document.getElementsByClassName("out" + String(ind))[0];
@@ -70,6 +73,7 @@ function leftClick() {
 }
 
 function rightClick() {
+
     rightCount = 1;
     getData();
     previousElement = document.getElementsByClassName("out" + String(ind))[0];
@@ -81,6 +85,7 @@ function rightClick() {
 }
 
 function blockBackNavigation() {
+    
     window.location.replace('login.html');
 }
 
