@@ -110,5 +110,3 @@ function isSignedUp(testEmail) {
     return false;
 }
 
-let a = new userData("a", "b", "c", "d", "e")
-console.log(a)

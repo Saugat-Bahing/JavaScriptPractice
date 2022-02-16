@@ -8,31 +8,7 @@
 
 body{
     z-index: -2;
-    background-color: rgb(189, 184, 184);
-}
-
-header{
-    height: 10vh;
-    background-color: rgb(2, 2, 3);
-    min-height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-header h1{
-    color: #fff;
-}
-
-header h3 {
-    position: absolute;
-    right: 10vw;
-    color: white;
-}
-
-h3:hover {
-    color: aqua;
-    cursor: pointer;
+    background-color: rgb(238, 238, 252);
 }
 
 .frame {
@@ -95,14 +71,13 @@ img{
 
 .container{
     height: 70%;
-    border: 2px solid black;
     display: flex;
 }
 
 .left{
     position: relative;
     bottom: 1px;
-    width: 15%;
+    width: 20%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -110,8 +85,8 @@ img{
 }
 
 .left_icon{
-    width: 60px;
-    height: 100px;
+    width: 80px;
+    height: 115px;
     background-color: black;
 }
 
@@ -144,7 +119,7 @@ img{
     left: 1px;
     bottom: 1px;
     transform: rotateZ(180deg);
-    width: 15%;
+    width: 20%;
     display: flex;
     justify-content: center;
     align-items: center;

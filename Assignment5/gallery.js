@@ -6,7 +6,7 @@ let post;
 let ind = 0;
 const right = document.getElementById("right_icon");
 const left = document.getElementById("left_icon");
-const logout = document.getElementsByTagName("h3")[0];
+const logout = document.getElementById("logout")
 let imgs;
 let outside;
 let leftCount;
